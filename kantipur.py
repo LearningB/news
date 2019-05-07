@@ -20,4 +20,4 @@ for article in kantipur_news.articles:
 
 
 kantipur_data = pandas.DataFrame(kantipur_news_data)
-kantipur_data.to_csv("kantipur_news")
+kantipur_data.to_csv("kantipur_news.csv")
