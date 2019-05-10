@@ -12,6 +12,7 @@ for article in kantipur_news.articles:
         article.nlp()
         article_data["title"] = article.title
         article_data["url"] = article.url
+        article_data["category"] = article.meta_keywords[-3]
         article_data["summary"] = article.summary
         article_data["meta_keywords"] = article.meta_keywords
         article_data["date"] = article.publish_date
@@ -21,3 +22,4 @@ for article in kantipur_news.articles:
 
 kantipur_data = pandas.DataFrame(kantipur_news_data)
 kantipur_data.to_csv("kantipur_news.csv")
+
